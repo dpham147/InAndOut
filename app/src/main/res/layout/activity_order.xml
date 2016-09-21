@@ -238,5 +238,6 @@
         android:text="@string/order_button_text"
         android:id="@+id/placeOrderButton"
         android:layout_columnSpan="3"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:onClick="placeOrder" />
 </GridLayout>

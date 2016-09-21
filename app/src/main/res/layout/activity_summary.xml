@@ -27,7 +27,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/order_total"
         android:id="@+id/totalTextView"
         android:layout_alignBottom="@+id/textView17"
         android:layout_toRightOf="@+id/textView17"
@@ -52,7 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/items_ordered"
         android:id="@+id/itemsTextView"
         android:layout_alignBottom="@+id/textView19"
         android:layout_toRightOf="@+id/textView19"
@@ -75,7 +73,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/subtotal"
         android:id="@+id/subtotalTextView"
         android:layout_below="@+id/textView19"
         android:layout_toRightOf="@+id/textView21"
@@ -98,7 +95,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/tax"
         android:id="@+id/taxTextView"
         android:layout_alignTop="@+id/textView23"
         android:layout_toRightOf="@+id/textView23"
@@ -116,5 +112,6 @@
         android:layout_marginStart="25dp"
         android:layout_below="@+id/textView23"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="returnToOrder" />
 </RelativeLayout>

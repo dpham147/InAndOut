@@ -73,6 +73,6 @@ public class OrderActivity extends AppCompatActivity {
         orderIntent.putExtra("Tax", tax);
         orderIntent.putExtra("TotalItems", totalItems);
 
-
+        startActivity(orderIntent);
     }
 }
