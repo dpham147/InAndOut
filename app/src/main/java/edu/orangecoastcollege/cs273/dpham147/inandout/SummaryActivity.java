@@ -6,11 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import java.text.NumberFormat;
-
 public class SummaryActivity extends AppCompatActivity {
 
-    private static NumberFormat currency = NumberFormat.getCurrencyInstance();
 
     public TextView totalTextView;
     public TextView itemsTextView;
@@ -28,7 +25,7 @@ public class SummaryActivity extends AppCompatActivity {
         taxTextView = (TextView) findViewById(R.id.taxTextView);
 
         Intent intentFromOrderActivity = getIntent();
-        totalTextView.setText(currency.format(intentFromOrderActivity.getStringExtra("Total")));
+        totalTextView.setText(intentFromOrderActivity.getStringExtra("Total"));
         subtotalTextView.setText(intentFromOrderActivity.getStringExtra("Subtotal"));
         itemsTextView.setText(intentFromOrderActivity.getStringExtra("TotalItems"));
         taxTextView.setText(intentFromOrderActivity.getStringExtra("Tax"));

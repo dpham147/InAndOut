@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import java.text.NumberFormat;
+
 public class OrderActivity extends AppCompatActivity {
 
     private EditText doubleDoubleEditText;
@@ -15,6 +17,14 @@ public class OrderActivity extends AppCompatActivity {
     private EditText smallDrinkEditText;
     private EditText mediumDrinkEditText;
     private EditText largeDrinkEditText;
+
+    private String total;
+    private String subtotal;
+    private String tax;
+    private String totalItems;
+
+    private static NumberFormat currency = NumberFormat.getCurrencyInstance();
+
 
     private Order currentOrder = new Order();
 
@@ -62,17 +72,19 @@ public class OrderActivity extends AppCompatActivity {
         currentOrder.setmMediumDrinks(medDrink);
         currentOrder.setmLargeDrinks(lgDrink);
 
-        double total = currentOrder.calculateTotal();
-        double subTotal = currentOrder.calculateSubtotal();
-        double tax = currentOrder.calculateTax();
-        int totalItems = currentOrder.getNumberItemsOrdered();
+        total = currency.format(currentOrder.calculateTotal());
+        subtotal = currency.format(currentOrder.calculateSubtotal());
+        tax = currency.format(currentOrder.calculateTax());
+        totalItems = String.valueOf(currentOrder.getNumberItemsOrdered());
 
         Intent orderIntent = new Intent(this, SummaryActivity.class);
         orderIntent.putExtra("Total", total);
-        orderIntent.putExtra("Subtotal", subTotal);
+        orderIntent.putExtra("Subtotal", subtotal);
         orderIntent.putExtra("Tax", tax);
         orderIntent.putExtra("TotalItems", totalItems);
 
         startActivity(orderIntent);
     }
+
+
 }
