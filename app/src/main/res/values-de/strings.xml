@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">In und Out</string>
+    <string name="title_text">Eine Bestellung aufgeben</string>
+    <string name="double_double_text">Double Double</string>
+    <string name="cheeseburger_text">Cheeseburger</string>
+    <string name="french_fries_text">Pommes frittes</string>
+    <string name="shakes_text">Shakes</string>
+    <string name="fountain_drink_text">Brunnen Getränke (Pick-Größe)</string>
+    <string name="small_drink_text">Klein</string>
+    <string name="medium_drink_text">Mittel</string>
+    <string name="large_drink_text">groß</string>
+    <string name="order_button_text">BESTELLUNG</string>
+    <string name="order_total_text">Gesamtbestellung</string>
+    <string name="items_ordered_text">Bestellte Artikel:</string>
+    <string name="subtotal_text">Zwischensumme:</string>
+    <string name="tax_text">Steuer (8%):</string>
+    <string name="new_order_text">START NEW ORDER</string>
+    <string name="cheesburger_price">$2.15</string>
+    <string name="double_double_price">$3.60</string>
+    <string name="french_fries_price">$1.65</string>
+    <string name="shake_price">$2.20</string>
+    <string name="small_drink_price">$1.45</string>
+    <string name="medium_drink_price">$1.55</string>
+    <string name="large_drink_price">$1.75</string>
+    <string name="order_total">$0.00</string>
+    <string name="items_ordered">0</string>
+    <string name="subtotal">$0.00</string>
+    <string name="tax">$0.00</string>
+</resources>

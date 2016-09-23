@@ -26,7 +26,7 @@ public class OrderActivity extends AppCompatActivity {
     private static NumberFormat currency = NumberFormat.getCurrencyInstance();
 
 
-    private Order currentOrder = new Order();
+    private Order currentOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,19 +40,56 @@ public class OrderActivity extends AppCompatActivity {
         smallDrinkEditText = (EditText) findViewById(R.id.smallDrinkEditText);
         mediumDrinkEditText = (EditText) findViewById(R.id.mediumDrinkEditText);
         largeDrinkEditText = (EditText) findViewById(R.id.largeDrinkEditText);
+
+        currentOrder = new Order();
     }
 
     public void placeOrder(View view){
         int doubleDouble, cheeseburgers, fries, shakes, smDrink, medDrink,lgDrink;
 
         try {
-            doubleDouble = Integer.parseInt(doubleDoubleEditText.getText().toString());
-            cheeseburgers = Integer.parseInt(cheeseburgerEditText.getText().toString());
-            fries = Integer.parseInt(frenchFriesEditText.getText().toString());
-            shakes = Integer.parseInt(shakesEditText.getText().toString());
-            smDrink = Integer.parseInt(smallDrinkEditText.getText().toString());
-            medDrink =Integer.parseInt(mediumDrinkEditText.getText().toString());
-            lgDrink = Integer.parseInt(largeDrinkEditText.getText().toString());
+            if (doubleDoubleEditText.getText().toString().equals("")){
+                doubleDouble = 0;
+            }
+            else {
+                doubleDouble = Integer.parseInt(doubleDoubleEditText.getText().toString());
+            }
+            if (cheeseburgerEditText.getText().toString().equals("")){
+                cheeseburgers = 0;
+            }
+            else {
+                cheeseburgers = Integer.parseInt(cheeseburgerEditText.getText().toString());
+            }
+            if (frenchFriesEditText.getText().toString().equals("")) {
+                fries = 0;
+            }
+            else {
+                fries = Integer.parseInt(frenchFriesEditText.getText().toString());
+            }
+            if (shakesEditText.getText().toString().equals("")){
+                shakes = 0;
+            }
+            else {
+                shakes = Integer.parseInt(shakesEditText.getText().toString());
+            }
+            if (smallDrinkEditText.getText().toString().equals("")) {
+                smDrink = 0;
+            }
+            else{
+                smDrink = Integer.parseInt(smallDrinkEditText.getText().toString());
+            }
+            if (mediumDrinkEditText.getText().toString().equals("")) {
+                medDrink = 0;
+            }
+            else {
+                medDrink = Integer.parseInt(mediumDrinkEditText.getText().toString());
+            }
+            if (largeDrinkEditText.getText().toString().equals("")) {
+                lgDrink = 0;
+            }
+            else {
+                lgDrink = Integer.parseInt(largeDrinkEditText.getText().toString());
+            }
         }
         catch (NumberFormatException e){
             doubleDouble = 0;

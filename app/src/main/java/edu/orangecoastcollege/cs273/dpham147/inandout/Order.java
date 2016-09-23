@@ -81,10 +81,6 @@ public class Order {
         return mSmallDrinks;
     }
 
-    public void Order(){
-
-    }
-
     public void setmCheeseburgers(int cheeseburgers) {
         mCheeseburgers = cheeseburgers;
     }
